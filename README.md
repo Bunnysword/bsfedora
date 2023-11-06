@@ -6,10 +6,10 @@ git clone https://github.com/Bunnysword/bsfedora
 ##### Repo rpmfusion and copr on
 ##### Boost dnf
 ##### Remove stock apps
-##### Install apps:
+##### Install apps
 ##### Installing codecs and plugins gstreamer
 ##### On flatpak repo
-##### Install app from flatpak:
+##### Install app from flatpak
 ##### Install Fsync kernel
 ##### Fix for gigabyte motherboard b550
 ##### Fix step volume for headphones fifine h6
