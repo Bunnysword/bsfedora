@@ -13,7 +13,8 @@ git clone https://github.com/Bunnysword/bsfedora
 ##### Install Fsync kernel
 ##### Fix for gigabyte motherboard b550
 ##### Fix step volume for headphones fifine h6
-____
+##### Root for Corectrl
+
 ## My Neofetch
 https://github.com/Bunnysword/FedoraXScript/blob/main/config.conf
 
