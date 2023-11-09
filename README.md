@@ -1,4 +1,4 @@
-# Bunny Sword script for Fedora 37+
+# Bunny Sword script for Fedora GNOME 38+
 ```
 git clone https://github.com/Bunnysword/bsfedora
 ```
