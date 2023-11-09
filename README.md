@@ -1,6 +1,6 @@
 # Bunny Sword script for Fedora GNOME 38+
 ```
-git clone https://github.com/Bunnysword/bsfedora
+git clone https://github.com/Bunnysword/sfg
 ```
 
 ##### Repo rpmfusion and copr on
