@@ -35,6 +35,8 @@ systemctl disable NetworkManager-wait-online.service
 #Papirus_icon
 echo -e "\tPapirus icons"
 sudo dnf in papirus-icon-theme
+#corectrl
+cp 90-corectrl.rules /etc/polkit-1/rules.d/
 #Fix_Volume_Step_for_Fifine_H6
 echo -e "Fix_Volume_Step_for_Fifine H6"
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 9
