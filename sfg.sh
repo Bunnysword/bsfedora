@@ -20,7 +20,7 @@ echo -e "\tNoiseTorch" && sudo dnf copr enable principis/NoiseTorch
 #Discord
 echo -e "\tDiscord" && sudo dnf config-manager --add-repo https://terra.fyralabs.com/terra.repo
 #Install_Apps
-echo -e "\tInstall Apps" && sudo dnf in mangohud timeshift goverlay steam lutris transmission-gtk kdenlive vlc gnome-tweaks htop redhat-lsb-core rocm-opencl inxi neofetch protontricks openssl discord noisetorch easyeffects corectrl gimp google-chrome-stable piper --allowerasing
+echo -e "\tInstall Apps" && sudo dnf in mangohud timeshift goverlay steam lutris transmission-gtk kdenlive vlc gnome-tweaks htop redhat-lsb-core rocm-opencl inxi neofetch protontricks openssl discord noisetorch easyeffects corectrl gimp google-chrome-stable openrgb piper --allowerasing
 sudo dnf update --refresh
 #Flatpak
 echo -e "\tFlatpak" && flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install flathub com.heroicgameslauncher.hgl com.obsproject.Studio com.mattjakeman.ExtensionManager
@@ -42,3 +42,6 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 9
 echo -e "Fix Suspend for Gigabyte Aorus Elite v2 B550"
 sudo cp wakeup-disable_GPP0.service /etc/systemd/system/
 sudo systemctl enable wakeup-disable_GPP0.service && sudo systemctl start wakeup-disable_GPP0.service
+neofetch
+cp config.conf /home/bunnysword/.config/neofetch/
+neofetch
