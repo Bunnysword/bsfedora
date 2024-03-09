@@ -45,9 +45,7 @@ echo -e "Fix Suspend for Gigabyte Aorus Elite v2 B550"
 sudo cp wakeup-disable_GPP0.service /etc/systemd/system/
 sudo systemctl enable wakeup-disable_GPP0.service && sudo systemctl start wakeup-disable_GPP0.service
 #Fix_rgb_logitech_g213
-mkdir /home/bunnysword/.config/OpenRGB
-cp 1.orp /home/bunnysword/.config/OpenRGB/
-#systemctl --user enable --now openrgb.service
-neofetch
-cp config.conf /home/bunnysword/.config/neofetch/
-neofetch
+mkdir /home/bunnysword/.config/OpenRGB && cp 1.orp /home/bunnysword/.config/OpenRGB/
+mkdir -p /home/bunnysword/.config/systemd/user/ && cp openrgb.service /home/bunnysword/.config/systemd/user/ && systemctl --user enable --now openrgb.service
+#other
+neofetch && cp config.conf /home/bunnysword/.config/neofetch/
