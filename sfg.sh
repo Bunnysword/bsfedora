@@ -36,7 +36,7 @@ systemctl disable NetworkManager-wait-online.service
 echo -e "\tPapirus icons"
 sudo dnf in papirus-icon-theme
 #corectrl
-cp 90-corectrl.rules /etc/polkit-1/rules.d/
+sudo cp 90-corectrl.rules /etc/polkit-1/rules.d/
 #Fix_Volume_Step_for_Fifine_H6
 echo -e "Fix_Volume_Step_for_Fifine H6"
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 9
@@ -46,6 +46,6 @@ sudo cp wakeup-disable_GPP0.service /etc/systemd/system/
 sudo systemctl enable wakeup-disable_GPP0.service && sudo systemctl start wakeup-disable_GPP0.service
 #Fix_rgb_logitech_g213
 mkdir /home/bunnysword/.config/OpenRGB && cp 1.orp /home/bunnysword/.config/OpenRGB/
-mkdir -p /home/bunnysword/.config/systemd/user/ && cp openrgb.service /home/bunnysword/.config/systemd/user/ && systemctl --user enable --now openrgb.service
+#mkdir -p /home/bunnysword/.config/systemd/user/ && cp openrgb.service /home/bunnysword/.config/systemd/user/ && systemctl --user enable --now openrgb.service
 #other
-neofetch && cp config.conf /home/bunnysword/.config/neofetch/
+neofetch && cp config.conf /home/bunnysword/.config/neofetch/ && neofetch
