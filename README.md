@@ -1,8 +1,6 @@
 # Bunny Sword script for Fedora GNOME 38+
 ```
 git clone https://github.com/Bunnysword/sfg && cd sfg/ && chmod 750 sfg.sh && ./sfg.sh
-
-
 ```
 
 ##### Repo rpmfusion and copr on
