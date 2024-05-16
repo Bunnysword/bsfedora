@@ -1,1 +1,1 @@
-RADV_PERFTEST=gpl,sam,nggc
+RADV_PERFTEST=sam,nggc
