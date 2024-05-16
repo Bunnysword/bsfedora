@@ -44,4 +44,6 @@ neofetch && cp config.conf /home/bunnysword/.config/neofetch/ && neofetch && sud
 sudo mv environment etc/ && sudo dmesg | grep BAR=
 #steam-presence
 git clone https://github.com/JustTemmie/steam-presence && mv config.json steam-presence/ && cd steam-presence/ && ./installer.sh
-
+#theme
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
