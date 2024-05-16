@@ -41,7 +41,7 @@ mkdir /home/bunnysword/.config/OpenRGB && cp 1.orp /home/bunnysword/.config/Open
 #other
 neofetch && cp config.conf /home/bunnysword/.config/neofetch/ && neofetch && sudo dnf in -y papirus-icon-theme
 #BAR
-sudo mv environment etc/
+sudo mv environment etc/ && sudo dmesg | grep BAR=
 #steam-presence
 git clone https://github.com/JustTemmie/steam-presence && mv config.json steam-presence/ && cd steam-presence/ && ./installer.sh
 
