@@ -9,7 +9,7 @@ sudo dnf in -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-
 sudo dnf in -y rpmfusion-free-appstream-data rpmfusion-nonfree-appstream-data
 #rm_stok_apps
 sudo dnf rm -y mediawriter rhythmbox evince yelp gnome-characters gnome-logs gnome-tour gnome-photos gnome-maps gnome-weather gnome-font-viewer gnome-contacts gnome-clocks gnome-calendar gnome-boxes libreoffice* power-profiles-daemon
-# firefox
+# totem firefox
 #other
 echo -e "\tcodecs" && sudo dnf in -y gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
 sudo dnf in -y lame\* --exclude=lame-devel && sudo dnf group upgrade -y Multimedia --with-optional --allowerasing
