@@ -19,7 +19,7 @@ echo -e "\tNoiseTorch" && sudo dnf copr enable -y principis/NoiseTorch && sudo d
 echo -e "\tDiscord" && sudo dnf config-manager --add-repo https://terra.fyralabs.com/terra.repo && sudo dnf in -y discord
 echo -e "\tMutter Patch" && sudo dnf copr enable -y trixieua/mutter-patched
 #Install_Apps
-sudo dnf in -y mangohud timeshift goverlay steam lutris transmission-gtk kdenlive vlc gnome-tweaks htop redhat-lsb-core rocm-opencl inxi neofetch protontricks openssl discord noisetorch easyeffects corectrl gimp openrgb piper --allowerasing
+sudo dnf in -y mangohud timeshift goverlay steam lutris transmission-gtk kdenlive vlc gnome-tweaks htop redhat-lsb-core rocm-opencl inxi neofetch protontricks openssl discord noisetorch easyeffects corectrl gimp openrgb piper nvtop --allowerasing
 # google-chrome-stable
 #Update
 sudo dnf update -y --refresh
