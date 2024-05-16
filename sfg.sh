@@ -8,7 +8,8 @@ sudo dnf autoremove -y && sudo dnf clean all && sudo dnf in -y dnf-automatic && 
 sudo dnf in -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf in -y rpmfusion-free-appstream-data rpmfusion-nonfree-appstream-data
 #rm_stok_apps
-sudo dnf rm -y mediawriter rhythmbox evince yelp gnome-characters gnome-logs totem gnome-tour gnome-photos gnome-maps gnome-weather gnome-font-viewer gnome-contacts gnome-clocks gnome-calendar gnome-boxes firefox libreoffice* power-profiles-daemon
+sudo dnf rm -y mediawriter rhythmbox evince yelp gnome-characters gnome-logs totem gnome-tour gnome-photos gnome-maps gnome-weather gnome-font-viewer gnome-contacts gnome-clocks gnome-calendar gnome-boxes libreoffice* power-profiles-daemon
+# firefox
 #other
 echo -e "\tcodecs" && sudo dnf in -y gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
 sudo dnf in -y lame\* --exclude=lame-devel && sudo dnf group upgrade -y Multimedia --with-optional --allowerasing
@@ -18,7 +19,8 @@ echo -e "\tNoiseTorch" && sudo dnf copr enable -y principis/NoiseTorch && sudo d
 echo -e "\tDiscord" && sudo dnf config-manager --add-repo https://terra.fyralabs.com/terra.repo && sudo dnf in -y discord
 echo -e "\tMutter Patch" && sudo dnf copr enable -y trixieua/mutter-patched
 #Install_Apps
-sudo dnf in -y mangohud timeshift goverlay steam lutris transmission-gtk kdenlive vlc gnome-tweaks htop redhat-lsb-core rocm-opencl inxi neofetch protontricks openssl discord noisetorch easyeffects corectrl gimp google-chrome-stable openrgb piper --allowerasing
+sudo dnf in -y mangohud timeshift goverlay steam lutris transmission-gtk kdenlive vlc gnome-tweaks htop redhat-lsb-core rocm-opencl inxi neofetch protontricks openssl discord noisetorch easyeffects corectrl gimp openrgb piper --allowerasing
+# google-chrome-stable
 #Update
 sudo dnf update -y --refresh
 #Flatpak
