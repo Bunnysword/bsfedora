@@ -40,5 +40,8 @@ mkdir /home/bunnysword/.config/OpenRGB && cp 1.orp /home/bunnysword/.config/Open
 #mkdir -p /home/bunnysword/.config/systemd/user/ && cp openrgb.service /home/bunnysword/.config/systemd/user/ && systemctl --user enable --now openrgb.service ?????????????????????
 #other
 neofetch && cp config.conf /home/bunnysword/.config/neofetch/ && neofetch && sudo dnf in -y papirus-icon-theme
+#BAR
+sudo mv environment etc/
 #steam-presence
 git clone https://github.com/JustTemmie/steam-presence && mv config.json steam-presence/ && cd steam-presence/ && ./installer.sh
+
