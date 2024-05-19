@@ -14,7 +14,7 @@ sudo dnf in -y gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh2
 sudo dnf in -y lame\* --exclude=lame-devel && sudo dnf group upgrade -y Multimedia --with-optional --allowerasing
 sudo dnf copr enable -y sentry/kernel-fsync #Fsync
 sudo grubby --args="gpu_sched.sched_policy=0" --update-kernel=ALL
-sudo dnf copr enable -y principis/NoiseTorch && sudo dnf in -y noisetorch && mkdir .config/systemd/user/ && cp noisetorch.service .config/systemd/user/ #Noisetorch
+sudo dnf copr enable -y principis/NoiseTorch && sudo dnf in -y noisetorch && mkdir /home/bunnysword/.config/systemd/user && cp noisetorch.service .config/systemd/user/ #Noisetorch
 sudo dnf config-manager --add-repo https://terra.fyralabs.com/terra.repo && sudo dnf in -y discord #Discord from Terra
 #GNOME tips
 sudo dnf in -y papirus-icon-theme #Papirus icons
