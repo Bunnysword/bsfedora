@@ -27,6 +27,10 @@ sudo dnf copr enable -y trixieua/mutter-patched #Mutter patched
 sudo dnf in -y mangohud timeshift goverlay steam lutris transmission-gtk kdenlive vlc gnome-tweaks htop redhat-lsb-core rocm-opencl inxi neofetch protontricks openssl discord noisetorch easyeffects corectrl gimp openrgb piper nvtop --allowerasing
 # google-chrome-stable
 sudo dnf update -y --refresh #Update
+#NVIDIAMOMENTO
+sudo dnf install gcc kernel-headers kernel-devel akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-libs xorg-x11-drv-nvidia-power
+sudo dnf install xorg-x11-drv-nvidia-libs.i686
+sudo cp nvidia-kms.conf /etc/modprobe.d/
 #Flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install flathub -y com.heroicgameslauncher.hgl com.obsproject.Studio com.mattjakeman.ExtensionManager net.davidotek.pupgui2 portproton
 #Services
