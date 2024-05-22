@@ -41,5 +41,5 @@ sudo mv environment /etc && sudo dmesg | grep BAR= #BAR
 mkdir /home/bunnysword/.config/MangoHud && cp MangoHud.conf /home/bunnysword/.config/MangoHud/ #MangoHud
 git clone https://github.com/JustTemmie/steam-presence && mv config.json steam-presence/ && cd steam-presence/ && ./installer.sh && cd ..
 #NVIDIAMOMENTO
-cd nvdriver/ && chmod 750 nvdriver.sh && ./nvdriver.sh
+cd nvdriver/ && chmod 750 nvdriver.sh && ./nvdriver.sh && inxi -G
 ####sudo grubby --args="gpu_sched.sched_policy=0" --update-kernel=ALL for amd wayland fix
