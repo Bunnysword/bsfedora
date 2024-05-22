@@ -13,7 +13,6 @@ sudo dnf rm -y mediawriter rhythmbox evince yelp gnome-characters gnome-logs gno
 sudo dnf in -y gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel #Codec
 sudo dnf in -y lame\* --exclude=lame-devel && sudo dnf group upgrade -y Multimedia --with-optional --allowerasing
 sudo dnf copr enable -y sentry/kernel-fsync #Fsync
-sudo grubby --args="gpu_sched.sched_policy=0" --update-kernel=ALL
 sudo dnf copr enable -y principis/NoiseTorch && sudo dnf in -y noisetorch && mkdir /home/bunnysword/.config/systemd/ && mkdir /home/bunnysword/.config/systemd/user && cp noisetorch.service /home/bunnysword/.config/systemd/user/ #Noisetorch
 sudo dnf config-manager --add-repo https://terra.fyralabs.com/terra.repo && sudo dnf in -y discord #Discord from Terra
 #GNOME tips
@@ -43,3 +42,4 @@ mkdir /home/bunnysword/.config/MangoHud && cp MangoHud.conf /home/bunnysword/.co
 git clone https://github.com/JustTemmie/steam-presence && mv config.json steam-presence/ && cd steam-presence/ && ./installer.sh && cd ..
 #NVIDIAMOMENTO
 cd nvdriver/ && chmod 750 nvdriver.sh && ./nvdriver.sh
+####sudo grubby --args="gpu_sched.sched_policy=0" --update-kernel=ALL for amd wayland fix
