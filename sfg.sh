@@ -14,7 +14,7 @@ sudo dnf in -y gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh2
 sudo dnf in -y lame\* --exclude=lame-devel && sudo dnf group upgrade -y Multimedia --with-optional --allowerasing
 sudo dnf copr enable -y sentry/kernel-fsync #Fsync
 sudo grubby --args="gpu_sched.sched_policy=0" --update-kernel=ALL
-sudo dnf copr enable -y principis/NoiseTorch && sudo dnf in -y noisetorch && mkdir /home/bunnysword/.config/systemd/user && cp noisetorch.service .config/systemd/user/ #Noisetorch
+sudo dnf copr enable -y principis/NoiseTorch && sudo dnf in -y noisetorch && mkdir /home/bunnysword/.config/systemd/ && mkdir /home/bunnysword/.config/systemd/user && cp noisetorch.service /home/bunnysword/.config/systemd/user/ #Noisetorch
 sudo dnf config-manager --add-repo https://terra.fyralabs.com/terra.repo && sudo dnf in -y discord #Discord from Terra
 #GNOME tips
 sudo dnf in -y papirus-icon-theme #Papirus icons
@@ -27,8 +27,6 @@ sudo dnf copr enable -y trixieua/mutter-patched #Mutter patched
 sudo dnf in -y mangohud timeshift goverlay steam lutris transmission-gtk kdenlive vlc gnome-tweaks htop redhat-lsb-core rocm-opencl inxi neofetch protontricks openssl discord noisetorch easyeffects corectrl gimp openrgb piper nvtop --allowerasing
 # google-chrome-stable
 sudo dnf update -y --refresh #Update
-sudo dnf in https://koji.rpmfusion.org/kojifiles/packages/nvidia-kmod/555.42.02/1.fc41/x86_64/akmod-nvidia-555.42.02-1.fc41.x86_64.rpm https://koji.rpmfusion.org/kojifiles/packages/xorg-x11-drv-nvidia/555.42.02/1.fc41/i686/xorg-x11-drv-nvidia-cuda-libs-555.42.02-1.fc41.i686.rpm https://koji.rpmfusion.org/kojifiles/packages/xorg-x11-drv-nvidia/555.42.02/1.fc41/i686/xorg-x11-drv-nvidia-libs-555.42.02-1.fc41.i686.rpm https://koji.rpmfusion.org/kojifiles/packages/xorg-x11-drv-nvidia/555.42.02/1.fc41/x86_64/xorg-x11-drv-nvidia-555.42.02-1.fc41.x86_64.rpm https://koji.rpmfusion.org/kojifiles/packages/xorg-x11-drv-nvidia/555.42.02/1.fc41/x86_64/xorg-x11-drv-nvidia-cuda-555.42.02-1.fc41.x86_64.rpm https://koji.rpmfusion.org/kojifiles/packages/xorg-x11-drv-nvidia/555.42.02/1.fc41/x86_64/xorg-x11-drv-nvidia-cuda-libs-555.42.02-1.fc41.x86_64.rpm https://koji.rpmfusion.org/kojifiles/packages/xorg-x11-drv-nvidia/555.42.02/1.fc41/x86_64/xorg-x11-drv-nvidia-kmodsrc-555.42.02-1.fc41.x86_64.rpm https://koji.rpmfusion.org/kojifiles/packages/xorg-x11-drv-nvidia/555.42.02/1.fc41/x86_64/xorg-x11-drv-nvidia-libs-555.42.02-1.fc41.x86_64.rpm https://koji.rpmfusion.org/kojifiles/packages/xorg-x11-drv-nvidia/555.42.02/1.fc41/x86_64/xorg-x11-drv-nvidia-power-555.42.02-1.fc41.x86_64.rpm https://koji.rpmfusion.org/kojifiles/packages/nvidia-modprobe/555.42.02/1.fc41/x86_64/nvidia-modprobe-555.42.02-1.fc41.x86_64.rpm https://koji.rpmfusion.org/kojifiles/packages/nvidia-settings/555.42.02/1.fc41/x86_64/nvidia-settings-555.42.02-1.fc41.x86_64.rpm https://koji.rpmfusion.org/kojifiles/packages/nvidia-persistenced/555.42.02/1.fc41/x86_64/nvidia-persistenced-555.42.02-1.fc41.x86_64.rpm https://dl.fedoraproject.org/pub/fedora/linux/development/rawhide/Everything/x86_64/os/Packages/x/xorg-x11-server-Xwayland-24.1.0-1.fc41.x86_64.rpm
-sudo cp nvidia-kms.conf /etc/modprobe.d/
 #Flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install flathub -y com.heroicgameslauncher.hgl com.obsproject.Studio com.mattjakeman.ExtensionManager net.davidotek.pupgui2 portproton
 #Services
@@ -41,7 +39,7 @@ sudo cp 90-corectrl.rules /etc/polkit-1/rules.d/ #Corectrl rules
 mkdir /home/bunnysword/.config/OpenRGB && cp 1.orp /home/bunnysword/.config/OpenRGB/ #OpenRGB profile
 neofetch && cp config.conf /home/bunnysword/.config/neofetch/ && neofetch #Neofetch conf
 sudo mv environment /etc && sudo dmesg | grep BAR= #BAR
-cp MangoHud.conf .config/MangoHud/ #MangoHud
+mkdir /home/bunnysword/.config/MangoHud && cp MangoHud.conf .config/MangoHud/ #MangoHud
 git clone https://github.com/JustTemmie/steam-presence && mv config.json steam-presence/ && cd steam-presence/ && ./installer.sh
 #NVIDIAMOMENTO
 cd nvdriver/ && chmod 750 nvdriver.sh && ./nvdriver.sh
