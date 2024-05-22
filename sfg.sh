@@ -39,7 +39,7 @@ sudo cp 90-corectrl.rules /etc/polkit-1/rules.d/ #Corectrl rules
 mkdir /home/bunnysword/.config/OpenRGB && cp 1.orp /home/bunnysword/.config/OpenRGB/ #OpenRGB profile
 neofetch && cp config.conf /home/bunnysword/.config/neofetch/ && neofetch #Neofetch conf
 sudo mv environment /etc && sudo dmesg | grep BAR= #BAR
-mkdir /home/bunnysword/.config/MangoHud && cp MangoHud.conf .config/MangoHud/ #MangoHud
-git clone https://github.com/JustTemmie/steam-presence && mv config.json steam-presence/ && cd steam-presence/ && ./installer.sh
+mkdir /home/bunnysword/.config/MangoHud && cp MangoHud.conf /home/bunnysword/.config/MangoHud/ #MangoHud
+git clone https://github.com/JustTemmie/steam-presence && mv config.json steam-presence/ && cd steam-presence/ && ./installer.sh && cd ..
 #NVIDIAMOMENTO
 cd nvdriver/ && chmod 750 nvdriver.sh && ./nvdriver.sh
