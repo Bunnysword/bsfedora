@@ -44,4 +44,4 @@ sudo mv environment /etc && sudo dmesg | grep BAR= #BAR
 cp MangoHud.conf .config/MangoHud/ #MangoHud
 git clone https://github.com/JustTemmie/steam-presence && mv config.json steam-presence/ && cd steam-presence/ && ./installer.sh
 #NVIDIAMOMENTO
-chmod 750 nvdriver.sh && ./nvdriver.sh
+cd nvdriver/ && chmod 750 nvdriver.sh && ./nvdriver.sh
