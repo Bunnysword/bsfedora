@@ -5,3 +5,4 @@ sudo dnf in https://koji.rpmfusion.org/kojifiles/packages/nvidia-kmod/555.42.02/
 sudo cp nvidia-kms.conf /etc/modprobe.d/
 #sudo dnf install gcc kernel-headers kernel-devel akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-libs xorg-x11-drv-nvidia-power
 #sudo dnf install xorg-x11-drv-nvidia-libs.i686
+sudo cp nvidia-kms.conf /etc/modprobe.d/
