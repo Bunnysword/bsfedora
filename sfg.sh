@@ -27,9 +27,6 @@ sudo dnf copr enable -y trixieua/mutter-patched #Mutter patched
 sudo dnf in -y mangohud timeshift goverlay steam lutris transmission-gtk kdenlive vlc gnome-tweaks htop redhat-lsb-core rocm-opencl inxi neofetch protontricks openssl discord noisetorch easyeffects corectrl gimp openrgb piper nvtop --allowerasing
 # google-chrome-stable
 sudo dnf update -y --refresh #Update
-#NVIDIAMOMENTO
-#sudo dnf install gcc kernel-headers kernel-devel akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-libs xorg-x11-drv-nvidia-power
-#sudo dnf install xorg-x11-drv-nvidia-libs.i686
 sudo dnf in https://koji.rpmfusion.org/kojifiles/packages/nvidia-kmod/555.42.02/1.fc41/x86_64/akmod-nvidia-555.42.02-1.fc41.x86_64.rpm https://koji.rpmfusion.org/kojifiles/packages/xorg-x11-drv-nvidia/555.42.02/1.fc41/i686/xorg-x11-drv-nvidia-cuda-libs-555.42.02-1.fc41.i686.rpm https://koji.rpmfusion.org/kojifiles/packages/xorg-x11-drv-nvidia/555.42.02/1.fc41/i686/xorg-x11-drv-nvidia-libs-555.42.02-1.fc41.i686.rpm https://koji.rpmfusion.org/kojifiles/packages/xorg-x11-drv-nvidia/555.42.02/1.fc41/x86_64/xorg-x11-drv-nvidia-555.42.02-1.fc41.x86_64.rpm https://koji.rpmfusion.org/kojifiles/packages/xorg-x11-drv-nvidia/555.42.02/1.fc41/x86_64/xorg-x11-drv-nvidia-cuda-555.42.02-1.fc41.x86_64.rpm https://koji.rpmfusion.org/kojifiles/packages/xorg-x11-drv-nvidia/555.42.02/1.fc41/x86_64/xorg-x11-drv-nvidia-cuda-libs-555.42.02-1.fc41.x86_64.rpm https://koji.rpmfusion.org/kojifiles/packages/xorg-x11-drv-nvidia/555.42.02/1.fc41/x86_64/xorg-x11-drv-nvidia-kmodsrc-555.42.02-1.fc41.x86_64.rpm https://koji.rpmfusion.org/kojifiles/packages/xorg-x11-drv-nvidia/555.42.02/1.fc41/x86_64/xorg-x11-drv-nvidia-libs-555.42.02-1.fc41.x86_64.rpm https://koji.rpmfusion.org/kojifiles/packages/xorg-x11-drv-nvidia/555.42.02/1.fc41/x86_64/xorg-x11-drv-nvidia-power-555.42.02-1.fc41.x86_64.rpm https://koji.rpmfusion.org/kojifiles/packages/nvidia-modprobe/555.42.02/1.fc41/x86_64/nvidia-modprobe-555.42.02-1.fc41.x86_64.rpm https://koji.rpmfusion.org/kojifiles/packages/nvidia-settings/555.42.02/1.fc41/x86_64/nvidia-settings-555.42.02-1.fc41.x86_64.rpm https://koji.rpmfusion.org/kojifiles/packages/nvidia-persistenced/555.42.02/1.fc41/x86_64/nvidia-persistenced-555.42.02-1.fc41.x86_64.rpm https://dl.fedoraproject.org/pub/fedora/linux/development/rawhide/Everything/x86_64/os/Packages/x/xorg-x11-server-Xwayland-24.1.0-1.fc41.x86_64.rpm
 sudo cp nvidia-kms.conf /etc/modprobe.d/
 #Flatpak
@@ -46,4 +43,5 @@ neofetch && cp config.conf /home/bunnysword/.config/neofetch/ && neofetch #Neofe
 sudo mv environment /etc && sudo dmesg | grep BAR= #BAR
 cp MangoHud.conf .config/MangoHud/ #MangoHud
 git clone https://github.com/JustTemmie/steam-presence && mv config.json steam-presence/ && cd steam-presence/ && ./installer.sh
-
+#NVIDIAMOMENTO
+chmod 750 nvdriver.sh && ./nvdriver.sh
