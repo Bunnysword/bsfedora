@@ -36,10 +36,10 @@ systemctl --user daemon-reload && systemctl --user start noisetorch && systemctl
 #Other
 mkdir /home/bunnysword/.config/OpenRGB && mv /conf/1.orp /home/bunnysword/.config/OpenRGB/ #OpenRGB profile
 mkdir /home/bunnysword/.config/neofetch && mv /conf/config.conf /home/bunnysword/.config/neofetch/ && neofetch #Neofetch conf
-sudo mv /conf/environment /etc && sudo dmesg | grep BAR= #BAR
 mkdir /home/bunnysword/.config/MangoHud && mv /conf/MangoHud.conf /home/bunnysword/.config/MangoHud/ #MangoHud
 git clone https://github.com/JustTemmie/steam-presence && mv /conf/config.json steam-presence/ && cd steam-presence/ && ./installer.sh && cd ..
 #NVIDIAMOMENTO
 cd nvdriver/ && chmod 750 nvdriver.sh && ./nvdriver.sh && inxi -G
 ####sudo grubby --args="gpu_sched.sched_policy=0" --update-kernel=ALL for amd wayland fix
 ####sudo mv /conf/90-corectrl.rules /etc/polkit-1/rules.d/ #Corectrl rules for amd
+####sudo mv /conf/environment /etc && sudo dmesg | grep BAR= #BAR for amd
