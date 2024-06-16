@@ -15,6 +15,7 @@ sudo dnf in -y lame\* --exclude=lame-devel && sudo dnf group upgrade -y Multimed
 sudo dnf copr enable -y sentry/kernel-fsync #Fsync
 sudo dnf copr enable -y principis/NoiseTorch && sudo dnf in -y noisetorch #Noisetorch
 sudo dnf config-manager --add-repo https://terra.fyralabs.com/terra.repo && sudo dnf in -y discord #Discord from Terra
+sudo rpmkeys --import https://repo.yandex.ru/yandex-browser/YANDEX-BROWSER-KEY.GPG && sudo dnf config-manager --add-repo http://repo.yandex.ru/yandex-browser/rpm/stable/x86_64 #Yandex
 #GNOME tips
 sudo dnf in -y papirus-icon-theme #Papirus icons
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 1
@@ -23,11 +24,12 @@ gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
 sudo dnf copr enable -y trixieua/mutter-patched #Mutter patched
 #Install_Apps
-sudo dnf in -y mangohud timeshift goverlay steam lutris transmission-gtk kdenlive vlc gnome-tweaks htop redhat-lsb-core rocm-opencl inxi neofetch protontricks openssl discord noisetorch easyeffects gimp openrgb piper nvtop google-chrome-stable --allowerasing
+sudo dnf in -y mangohud timeshift goverlay steam lutris transmission-gtk kdenlive vlc gnome-tweaks htop redhat-lsb-core rocm-opencl inxi neofetch protontricks openssl discord noisetorch easyeffects gimp openrgb piper nvtop  --allowerasing
+#google-chrome-stable
 #corectrl
 sudo dnf update -y --refresh #Update
 #Flatpak
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install flathub -y com.heroicgameslauncher.hgl com.obsproject.Studio com.mattjakeman.ExtensionManager net.davidotek.pupgui2 portproton
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo && flatpak install flathub -y com.heroicgameslauncher.hgl com.obsproject.Studio com.mattjakeman.ExtensionManager portproton net.nokyan.Resources com.leinardi.gwe
 #Services
 sudo systemctl mask plymouth-quit-wait.service && systemctl disable livesys-late.service && systemctl disable livesys.service && systemctl disable rpcbind.service && systemctl disable lvm2-monitor.service && systemctl disable NetworkManager-wait-online.service #Disable
 sudo firewall-cmd --zone=public --permanent --add-port=1714-1764/tcp && sudo firewall-cmd --zone=public --permanent --add-port=1714-1764/udp && sudo systemctl restart firewalld.service #GSconnect fix
