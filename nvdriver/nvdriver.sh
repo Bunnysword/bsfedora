@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #nvutils
-flatpak install flathub com.leinardi.gwe
+#flatpak install flathub com.leinardi.gwe
 #nvdriver
 sudo dnf copr enable kwizart/nvidia-driver-rawhide -y
 sudo dnf install rpmfusion-nonfree-release-rawhide -y
