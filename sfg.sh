@@ -21,7 +21,7 @@ sudo dnf in -y papirus-icon-theme #Papirus icons
 gsettings set org.gnome.settings-daemon.plugins.media-keys volume-step 1
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-gsettings set org.gnome.desktop.interface icon-theme 'Papirus-Dark'
+gsettings set org.gnome.desktop.interface icon-theme 'Papirus'
 sudo dnf copr enable -y trixieua/mutter-patched #Mutter patched
 #Install_Apps
 sudo dnf in -y timeshift goverlay steam lutris transmission-gtk kdenlive vlc gnome-tweaks htop redhat-lsb-core inxi neofetch protontricks openssl discord noisetorch easyeffects gimp openrgb piper nvtop --allowerasing
